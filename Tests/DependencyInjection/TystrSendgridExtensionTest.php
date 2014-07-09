@@ -31,10 +31,10 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testConfigWithoutPasswordThrowsException()
     {
-        $config = [
+        $config = array(
             'username' => 'tyler',
-        ];
-        $this->extension->load([$config], $this->container);
+        );
+        $this->extension->load(array($config), $this->container);
     }
 
     /**
@@ -42,10 +42,10 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testConfigWithoutUsernameThrowsException()
     {
-        $config = [
+        $config = array(
             'password' => 'pa$$w0rd',
-        ];
-        $this->extension->load([$config], $this->container);
+        );
+        $this->extension->load(array($config), $this->container);
     }
 
     public function testSendgridClassParameterExists()
@@ -62,10 +62,10 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
 
     protected function loadDefaults()
     {
-        $config = [
+        $config = array(
             'username' => 'tyler',
             'password' => 'pass',
-        ];
-        $this->extension->load([$config], $this->container);
+        );
+        $this->extension->load(array($config), $this->container);
     }
 }
