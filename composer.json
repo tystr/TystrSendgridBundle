@@ -1,0 +1,22 @@
+{
+    "name": "tystr/sendgrid-bundle",
+    "description": "A Symfony2 Bundle for integrating the sendgrid php library into the Symfony2 framework",
+    "require": {
+        "sendgrid/sendgrid": "*",
+        "symfony/framework-bundle": "~2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tyler Stroud",
+            "email": "tyler@tylerstroud.com"
+        }
+    ],
+    "autoload": {
+         "psr-4": { "Tystr\\Bundle\\SendgridBundle\\": "" }
+    },
+    "minimum-stability": "stable"
+}
