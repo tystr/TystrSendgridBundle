@@ -23,7 +23,7 @@ class TystrSendgridExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $container->setParameter('tystr_sendgrid.username', $config['username']);
-        $container->setParameter('tystr_sendgrid.password', $config['username']);
+        $container->setParameter('tystr_sendgrid.password', $config['password']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
