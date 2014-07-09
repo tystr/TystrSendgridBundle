@@ -60,6 +60,15 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->container->hasDefinition('tystr_sendgrid.sendgrid'));
     }
 
+    public function testSendgridServiceInstantiation()
+    {
+        $this->loadDefaults();
+        $this->assertInstanceOf(
+            $this->container->getParameter('tystr_sendgrid.sendgrid.class'),
+            $this->container->get('tystr_sendgrid.sendgrid')
+        );
+    }
+
     protected function loadDefaults()
     {
         $config = array(
