@@ -25,6 +25,10 @@ class TystrSendgridExtension extends Extension
         $container->setParameter('tystr_sendgrid.username', $config['username']);
         $container->setParameter('tystr_sendgrid.password', $config['password']);
 
+        if (true === $config['enable_short_alias']) {
+            $container->setAlias('sendgrid', 'tystr_sendgrid.sendgrid');
+        }
+
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
     }

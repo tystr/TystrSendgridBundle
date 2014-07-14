@@ -25,6 +25,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('username')->isRequired()->end()
                 ->scalarNode('password')->isRequired()->end()
                 ->booleanNode('turn_off_ssl_verification')->end()
+                ->booleanNode('enable_short_alias')->defaultTrue()->end()
             ->end()
         ->end();
 
