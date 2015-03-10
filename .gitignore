@@ -1,2 +1,3 @@
 /vendor/
 /composer.phar
+/Tests/Controller/App/cache/*

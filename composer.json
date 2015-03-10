@@ -13,10 +13,14 @@
     ],
     "require": {
         "sendgrid/sendgrid": "*",
-        "symfony/framework-bundle": "~2.2"
+        "symfony/framework-bundle": "~2.2",
+        "phpoption/phpoption": "~1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "symfony/finder": "~2.2",
+        "symfony/browser-kit": "~2.2",
+        "symfony/monolog-bundle": "~2.2"
     },
     "autoload": {
          "psr-4": { "Tystr\\Bundle\\SendgridBundle\\": "" }
