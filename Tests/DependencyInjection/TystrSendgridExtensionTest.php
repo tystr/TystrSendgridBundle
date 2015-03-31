@@ -53,7 +53,7 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
         $config = array(
             'username' => 'tyler',
             'password' => 'pa$$w0rd',
-            'enable_short_alias' => false
+            'enable_short_alias' => false,
         );
         $this->extension->load(array($config), $this->container);
         $this->assertFalse($this->container->hasAlias('sendgrid'));

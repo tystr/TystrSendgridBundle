@@ -1,4 +1,5 @@
 <?php
+
 namespace Tystr\Bundle\SendgridBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -6,8 +7,7 @@ use Tystr\Bundle\SendgridBundle\Event\EventType;
 use Tystr\Bundle\SendgridBundle\Event\WebHookEvent;
 
 /**
- * Class WebHoookControllerTest
- * @package Tystr\Bundle\SendgridBundle\Tests\Controller
+ * Class WebHoookControllerTest.
  */
 class WebHookControllerTest  extends WebTestCase
 {
@@ -43,15 +43,15 @@ BODY;
         $dispatcher = $client->getKernel()->getContainer()->get('event_dispatcher');
         $triggeredHooks = array();
 
-        $dispatcher->addListener(EventType::Click, function(WebHookEvent $event) use (&$triggeredHooks) {
+        $dispatcher->addListener(EventType::Click, function (WebHookEvent $event) use (&$triggeredHooks) {
             $triggeredHooks[$event->getType()] = true;
         });
 
-        $dispatcher->addListener(EventType::Processed, function(WebHookEvent $event) use (&$triggeredHooks) {
+        $dispatcher->addListener(EventType::Processed, function (WebHookEvent $event) use (&$triggeredHooks) {
             $triggeredHooks[$event->getType()] = true;
         });
 
-        $dispatcher->addListener(EventType::Unsubscribe, function(WebHookEvent $event) use (&$triggeredHooks) {
+        $dispatcher->addListener(EventType::Unsubscribe, function (WebHookEvent $event) use (&$triggeredHooks) {
             $triggeredHooks[$event->getType()] = true;
         });
 

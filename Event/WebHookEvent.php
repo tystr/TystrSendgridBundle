@@ -1,4 +1,5 @@
 <?php
+
 namespace Tystr\Bundle\SendgridBundle\Event;
 
 use PhpOption\None;
@@ -7,8 +8,7 @@ use PhpOption\Some;
 use Symfony\Component\EventDispatcher\Event;
 
 /**
- * Class WebHookEvent
- * @package Tystr\Bundle\Event
+ * Class WebHookEvent.
  */
 class WebHookEvent extends Event
 {

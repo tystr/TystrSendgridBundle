@@ -1,4 +1,5 @@
 <?php
+
 namespace Tystr\Bundle\SendgridBundle\Controller;
 
 use Psr\Log\LoggerInterface;
@@ -10,13 +11,13 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Tystr\Bundle\SendgridBundle\Event\WebHookEvent;
 
 /**
- * Class WebHookController
- * @package Tystr\Controller
+ * Class WebHookController.
  */
 class WebHookController extends Controller
 {
     /**
      * @param Request $request
+     *
      * @return Response
      */
     public function processHookAction(Request $request)
@@ -25,12 +26,12 @@ class WebHookController extends Controller
         $logger = $this->get('logger');
 
         $body = $request->getContent();
-        $logger->info('Received sendgrid webhook ' . $body);
+        $logger->info('Received sendgrid webhook '.$body);
 
         $events = json_decode($body, true);
 
         if ($events === false || $events === null) {
-            $logger->error('Unable to decode sendgrid webhook. Body: ' . $body);
+            $logger->error('Unable to decode sendgrid webhook. Body: '.$body);
             throw new BadRequestHttpException('Unabled to parse request body');
         }
 
@@ -38,7 +39,7 @@ class WebHookController extends Controller
         $dispatcher = $this->get('event_dispatcher');
 
         foreach ($events as $eventData) {
-            $type = 'sendgrid.' . $eventData['event'];
+            $type = 'sendgrid.'.$eventData['event'];
             $dispatcher->dispatch($type, new WebHookEvent($type, $eventData));
         }
 
