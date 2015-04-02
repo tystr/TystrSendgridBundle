@@ -8,11 +8,11 @@ A simple bundle for integrating the sendgrid php library into the Symfony2 frame
 Installation
 ----------------------------------
 
-### Via Composer
+### Composer
 
-Simply add the following to your project's composer.json file:
+Require the package with the following command:
 
-    "tystr/sendgrid-bundle": "*"
+    $ composer.phar require tystr/sendgrid-bundle
 
 Configuration
 -------------
