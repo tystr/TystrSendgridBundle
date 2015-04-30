@@ -19,7 +19,7 @@ Configuration
 
 Add the following to your configuration file:
 
-    tystr_sendgrid_bundle:
+    tystr_sendgrid:
         username: YOUR_SENDGRID_USERNAME
         password: YOUR_SENDGRID_PASSWORD
         
