@@ -1,7 +1,8 @@
 TystrSendgridBundle
 ========================
 
-[![Build Status](https://travis-ci.org/tystr/TystrSendgridBundle.svg?branch=master)](https://travis-ci.org/tystr/TystrSendgridBundle)
+[![Build Status](https://travis-ci.org/tystr/TystrSendgridBundle.svg?branch=master)](https://travis-ci.org/tystr/TystrSendgridBundle) [![Test Coverage](https://codeclimate.com/github/tystr/TystrSendgridBundle/badges/coverage.svg)](https://codeclimate.com/github/tystr/TystrSendgridBundle/coverage)
+
 
 A simple bundle for integrating the sendgrid php library into the Symfony2 framework.
 
