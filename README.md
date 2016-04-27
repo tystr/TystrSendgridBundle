@@ -23,7 +23,14 @@ Add the following to your configuration file:
     tystr_sendgrid:
         username: YOUR_SENDGRID_USERNAME
         password: YOUR_SENDGRID_PASSWORD
-        
+      
+Register Bundle
+---------------
+
+In AppKernel.php, you need to register your bundle.
+
+    new Tystr\Bundle\SendgridBundle\TystrSendgridBundle(),
+
 Usage
 ------
 
