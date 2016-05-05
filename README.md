@@ -18,6 +18,11 @@ Require the package with the following command:
 Configuration
 -------------
 
+Enable the bundle by adding it to the list of registered bundles
+in the ``app/AppKernel.php`` file of your project:
+
+    new Tystr\Bundle\SendgridBundle\TystrSendgridBundle(),
+
 Add the following to your configuration file:
 
     tystr_sendgrid:
