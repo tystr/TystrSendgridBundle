@@ -29,30 +29,16 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
      */
-    public function testConfigWithoutPasswordThrowsException()
+    public function testConfigEmptyThrowsException()
     {
-        $config = array(
-            'username' => 'tyler',
-        );
-        $this->extension->load(array($config), $this->container);
-    }
-
-    /**
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     */
-    public function testConfigWithoutUsernameThrowsException()
-    {
-        $config = array(
-            'password' => 'pa$$w0rd',
-        );
+        $config = [];
         $this->extension->load(array($config), $this->container);
     }
 
     public function testConfigWithEnableShortAliasIsFalse()
     {
         $config = array(
-            'username' => 'tyler',
-            'password' => 'pa$$w0rd',
+            'api_key' => 'tyler',
             'enable_short_alias' => false,
         );
         $this->extension->load(array($config), $this->container);
@@ -68,8 +54,7 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
     public function assertParameters()
     {
         $this->loadDefaults();
-        $this->assertEquals('tyler', $this->container->get('tystr_sendgrid.username'));
-        $this->assertEquals('pa$$w0rd', $this->container->get('tystr_sendgrid.password'));
+        $this->assertEquals('tyler', $this->container->get('tystr_sendgrid.api_key'));
     }
 
     public function testSendgridClassParameterExists()
@@ -96,8 +81,7 @@ class TystrSendgridExtensionTest extends \PHPUnit_Framework_TestCase
     protected function loadDefaults()
     {
         $config = array(
-            'username' => 'tyler',
-            'password' => 'pass',
+            'api_key' => 'tyler',
         );
         $this->extension->load(array($config), $this->container);
     }

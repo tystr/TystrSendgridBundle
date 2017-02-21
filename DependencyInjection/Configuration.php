@@ -22,8 +22,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('username')->isRequired()->end()
-                ->scalarNode('password')->isRequired()->end()
+                ->scalarNode('api_key')->isRequired()->end()
                 ->booleanNode('turn_off_ssl_verification')->end()
                 ->booleanNode('enable_short_alias')->defaultTrue()->end()
             ->end()

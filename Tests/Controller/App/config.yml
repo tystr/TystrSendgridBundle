@@ -4,8 +4,7 @@ framework:
     router:          { resource: "%kernel.root_dir%/routing.yml" }
 
 tystr_sendgrid:
-  username: foo
-  password: bar
+  api_key: foo
 
 monolog:
     handlers:

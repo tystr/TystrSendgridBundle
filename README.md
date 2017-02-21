@@ -26,8 +26,7 @@ in the ``app/AppKernel.php`` file of your project:
 Add the following to your configuration file:
 
     tystr_sendgrid:
-        username: YOUR_SENDGRID_USERNAME
-        password: YOUR_SENDGRID_PASSWORD
+        api_key: YOUR_SENDGRID_API_KEY
         
 Usage
 ------
