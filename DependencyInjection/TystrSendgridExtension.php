@@ -22,8 +22,7 @@ class TystrSendgridExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('tystr_sendgrid.username', $config['username']);
-        $container->setParameter('tystr_sendgrid.password', $config['password']);
+        $container->setParameter('tystr_sendgrid.api_key', $config['api_key']);
 
         if (true === $config['enable_short_alias']) {
             $container->setAlias('sendgrid', 'tystr_sendgrid.sendgrid');

@@ -10,8 +10,7 @@
 
     <services>
         <service id="tystr_sendgrid.sendgrid" class="%tystr_sendgrid.sendgrid.class%">
-            <argument>%tystr_sendgrid.username%</argument>
-            <argument>%tystr_sendgrid.password%</argument>
+            <argument>%tystr_sendgrid.api_key%</argument>
         </service>
     </services>
 </container>
